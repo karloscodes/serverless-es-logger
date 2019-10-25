@@ -1,0 +1,19 @@
+{
+  "name": "lamda-es-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-aws-es": "^6.0.0",
+    "winston": "^3.2.1",
+    "winston-elasticsearch": "^0.8.2"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
