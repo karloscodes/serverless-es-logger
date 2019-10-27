@@ -1,0 +1,33 @@
+{
+  "index_patterns": ["logstash-*"],
+   "settings": {
+     "index": {
+       "refresh_interval": "5s"
+     }
+   },
+   "mappings": {
+     "_source": {
+       "enabled": true
+     },
+     "properties": {
+       "@timestamp": {
+         "type": "date"
+       },
+       "@version": {
+         "type": "keyword"
+       },
+       "message": {
+         "type": "text",
+         "index": true
+       },
+       "severity": {
+         "type": "keyword",
+         "index": true
+       },
+       "fields": {
+         "dynamic": true,
+         "properties": {}
+       }
+     }
+   }
+}
