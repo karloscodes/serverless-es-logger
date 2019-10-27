@@ -7,10 +7,10 @@ const AWSESConnection = require('http-aws-es')
 const elasticsearchAWSClientOptions = {
   hosts: [process.env.ES_DOMAIN_ENDPOINT],
   connectionClass: AWSESConnection,
-  awsConfig: new AWS.Config({ region: process.env.ES_REGION }),
-  requestTimeout: 5000,
-  maxRetries: 3,
-  log: null
+  awsConfig: new AWS.Config({ region: process.env.ES_REGION })
+  // requestTimeout: 3000,
+  // maxRetries: 5,
+  // log: null
 }
 
 const elasticsearchClientOptions = {
@@ -28,7 +28,7 @@ const elasticsearchClient = () => {
 const defaultOptions = {
   client: elasticsearchClient(),
   indexType: process.env.ES_INDEX_TYPE || 'logs',
-  indexPattern: process.env.ES_INDEX_PATTERN || 'logstash-YYYY.MM.DD'
+  indexPattern: process.env.ES_INDEX_PATTERN || 'logstash_3-YYYY.MM.DD'
 }
 
 const Log = bunyan.createLogger({
