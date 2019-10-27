@@ -1,7 +1,7 @@
 const Writable = require('stream').Writable
 const dayjs = require('dayjs')
 const defaultMappingTemplate = require('./index-template-mapping.json')
-const defaultTransformer = require('./lambdaLogTransformer')
+const defaultTransformer = require('./LambdaLogTransformer')
 
 function generateIndexName (pattern, entry) {
   const [prefix, datePattern] = pattern.split('-')

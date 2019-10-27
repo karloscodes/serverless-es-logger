@@ -1,5 +1,5 @@
 {
-  "name": "lamda-es-logger",
+  "name": "serverless-es-logger",
   "version": "0.0.14",
   "description": "",
   "main": "index.js",
@@ -9,13 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.556.0",
-    "bunyan": "^1.8.12",
     "dayjs": "^1.8.16",
     "elasticsearch": "^16.4.0",
-    "http-aws-es": "^6.0.0",
-    "winston": "^3.2.1",
-    "winston-elasticsearch": "^0.8.2"
+    "http-aws-es": "^6.0.0"
+  },
+  "peerDependencies": {
+    "bunyan": "^1.8.12",
+    "aws-sdk": "^2.556.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",
