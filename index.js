@@ -20,7 +20,6 @@ const elasticsearchClientOptions = {
 
 const elasticsearchClient = () => {
   if (process.env.ES_DOMAIN_ENDPOINT) {
-    console.log(elasticsearchAWSClientOptions)
     return es.Client(elasticsearchAWSClientOptions)
   }
   return es.Client(elasticsearchClientOptions)
@@ -33,7 +32,7 @@ const defaultOptions = {
 }
 
 const Log = bunyan.createLogger({
-  name: 'lamnda-es-logger',
+  name: 'serverless-es-logger',
   streams: [
     { stream: new ElasticsearchStream(defaultOptions) }
   ],

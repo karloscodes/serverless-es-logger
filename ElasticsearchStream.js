@@ -52,14 +52,8 @@ class ElasticsearchStream extends Writable {
     const type = this._type
 
     const input = JSON.parse(entry.toString('utf8'))
-
     const output = this._transformer.transform(input)
 
-    // if (this._writeCallback) {
-    //   output = this._writeCallback(output, input) || output
-    // }
-
-    console.log(callOrString(index, input))
     const options = {
       index: callOrString(index, input),
       type: callOrString(type, input),

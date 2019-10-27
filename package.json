@@ -18,6 +18,8 @@
     "aws-sdk": "^2.556.0"
   },
   "devDependencies": {
+    "bunyan": "^1.8.12",
+    "aws-sdk": "^2.556.0",
     "jest": "^24.9.0",
     "standard": "^14.3.1"
   }
