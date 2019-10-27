@@ -1,3 +1,5 @@
+const omit = require('lodash.omit')
+
 const levels = {
   10: 'trace',
   20: 'debug',
@@ -17,12 +19,7 @@ const awsLambdaFields = {
 
 const extractLogFields = (logData) => {
   const ignoredFields = ['v', 'name', 'pid', 'time', 'level', 'msg']
-  return Object.keys(logData).reduce((object, key) => {
-    if (!ignoredFields.include(key)) {
-      object[key] = logData[key]
-    }
-    return object
-  }, {})
+  omit(logData, ignoredFields)
 }
 
 const lambdaLogTransformer = function lambdaLogTransformer (logData) {

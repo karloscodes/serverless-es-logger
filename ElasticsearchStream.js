@@ -63,7 +63,12 @@ class ElasticsearchStream extends Writable {
     const self = this
     client.index(options, function (err) {
       if (err) {
-        self.emit('error', err)
+        console.log(err)
+        if (err.message.match(/Request Timeout/)) {
+          console.log(err)
+        } else {
+          self.emit('error', err)
+        }
       }
       callback()
     })

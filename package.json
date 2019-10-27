@@ -1,6 +1,6 @@
 {
   "name": "serverless-es-logger",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "dependencies": {
     "dayjs": "^1.8.16",
     "elasticsearch": "^16.4.0",
-    "http-aws-es": "^6.0.0"
+    "http-aws-es": "^6.0.0",
+    "lodash.omit": "^4.5.0"
   },
   "peerDependencies": {
     "bunyan": "^1.8.12",
