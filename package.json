@@ -4,15 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
   "dependencies": {
     "dayjs": "^1.8.16",
     "elasticsearch": "^16.4.0",
     "http-aws-es": "^6.0.0",
-    "lodash.omit": "^4.5.0"
+    "lodash.omit": "^4.5.0",
+    "omit-empty": "^1.0.0"
   },
   "peerDependencies": {
     "bunyan": "^1.8.12",
