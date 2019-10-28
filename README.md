@@ -2,6 +2,7 @@
 
 # serverless-es-logger (WIP)
 
+
 A simple logger for AWS Lambda that sends logs to Elasticsearch without writting to Cloudwatch.
 
 
