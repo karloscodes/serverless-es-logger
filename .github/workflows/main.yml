@@ -1,8 +1,8 @@
-name: Node.js Package
+name: CI/CD
 
 on:
   release:
-    types: [created]
+    types: [push]
 
 jobs:
   build:
