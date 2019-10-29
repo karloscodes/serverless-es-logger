@@ -4,6 +4,7 @@
 
 A simple logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch.
 
+
 ## Features
 
 - Bunyan compatible (supports log levels, error objects, etc see more (here)[https://github.com/trentm/node-bunyan])
