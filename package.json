@@ -1,6 +1,6 @@
 {
   "name": "serverless-es-logger",
-  "version": "0.0.22",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
