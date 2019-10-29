@@ -2,7 +2,7 @@
 
 # serverless-es-logger
 
-A simple logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch.
+A simple logger for AWS Lambda that sends logs directly to Elasticsearch instead of Cloudwatch.
 
 
 ## Features
