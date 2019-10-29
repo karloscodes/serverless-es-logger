@@ -53,5 +53,6 @@
       "pre-push": "npm test",
       "pre-commit": "npm run lint"
     }
+    
   }
 }
