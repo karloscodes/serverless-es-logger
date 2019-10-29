@@ -1,6 +1,6 @@
-const LogTransformer = require('../LogTransformer')
+const LogTransformer = require('../lib/LogTransformer')
 
-describe('Log transformation', () => {
+describe('LogTransformer', () => {
   it('builds a logstash compatible payload', () => {
     const input = {
       time: new Date().toISOString(),
