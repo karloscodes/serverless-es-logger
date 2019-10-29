@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [6, 8, 10]
+        node-version: [8, 10]
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
