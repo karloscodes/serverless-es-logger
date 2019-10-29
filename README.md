@@ -34,7 +34,7 @@ yarn add serverless-es-logger
 
 `ES_INDEX_PATTERN`: `(optional)` The pattern used to create indexes in ES. `default:` logstash-YYYY.MM.DD
 
-### Connection configuration for AWS Elasticsearch Service
+### Connection configuration for the AWS Elasticsearch Service
 
 `ES_DOMAIN_ENDPOINT`: `(required)` The domain's endpoint
 
