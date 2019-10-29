@@ -39,6 +39,16 @@
     "jest": "^24.9.0",
     "standard": "^14.3.1"
   },
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "logging",
+    "elasticsearch",
+    "kibana",
+    "logstash",
+    "bunyan"
+  ],
   "husky": {
     "hooks": {
       "pre-push": "npm test",
