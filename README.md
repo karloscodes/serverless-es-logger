@@ -49,7 +49,7 @@ yarn add serverless-es-logger
 Simple, just require and use it
 
 ```javascript
-const Log = require('../')
+const Log = require('serverless-es-logger')
 
 Log.info({ message: 'This is a test', thid: 1 })
 
