@@ -10,7 +10,7 @@ A simple logger for AWS Lambda that sends logs directly to Elasticsearch instead
 - Configurable via environment variables
 - Attaches AWS Lambda context variables to the log lines such as, `AWS_REGION`, `functionName`, `functionVersion`, `functionMemorySize` and `stage`
 - Works with the AWS Elasticsearch Service and other providers
-- Compatible with Logstash and Kibana
+- Compatible with Kibana
 
 ## Installation
 
