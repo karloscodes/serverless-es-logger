@@ -1,6 +1,6 @@
 {
   "name": "serverless-es-logger",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "node": ">=8.0"
   },
@@ -14,7 +14,7 @@
     "url": "https://github.com/ccverak/serverless-es-logger.git",
     "type": "git"
   },
-  "author": "David García <me@carloscastellanosvera.com",
+  "author": "Carlos Castellanos Vera <me@carloscastellanosvera.com",
   "license": "ISC",
   "standard": {
     "env": [
