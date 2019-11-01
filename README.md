@@ -6,7 +6,7 @@ A simple logger for AWS Lambda that sends logs directly to Elasticsearch instead
 
 ## Features
 
-- It's a Bunyan logger (see what it is supported [here](https://github.com/trentm/node-bunyan)
+- It's a Bunyan logger (see what it is supported [here](https://github.com/trentm/node-bunyan))
 - Configurable via environment variables
 - Auto attaches AWS Lambda environment variables such as `AWS_REGION`, `AWS_LAMBDA_FUNCTION_NAME`, `STAGE` etc.
 - Works with the AWS Elasticsearch Service and other providers. Versions 6.x and 7.x are supported.
