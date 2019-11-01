@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=8.0"
   },
-  "description": "A simple logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch. Just required and use :)",
+  "description": "A simple logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch. Just require and use :)",
   "main": "index.js",
   "scripts": {
     "test": "jest",
