@@ -27,7 +27,7 @@ With yarn:
 yarn add serverless-es-logger
 ```
 
-## Configuration
+## Configuration via environment variables
 
 ### Index configuration
 
