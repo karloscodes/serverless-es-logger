@@ -68,4 +68,33 @@ describe('LogTransformer', () => {
     delete process.env.STAGE
     delete process.env.AWS_EXECUTION_ENV
   })
+
+  it('uses the correlationIds from `lambda-power-tools` if available', () => {
+    const CorrelationIds = require('@dazn/lambda-powertools-correlation-ids')
+    const correlationId = '12345678'
+    CorrelationIds.set('id', correlationId)
+
+    const input = {
+      time: new Date().toISOString(),
+      msg: 'log msg',
+      level: 30,
+      v: 'v',
+      name: 'logger-name',
+      pid: 123,
+      hostname: 'pc'
+    }
+
+    const output = LogTransformer.transform(input)
+
+    expect(output).toEqual(
+      expect.objectContaining({
+        '@timestamp': input.time,
+        message: input.msg,
+        severity: 'info',
+        autofields: {
+          'x-correlation-id': correlationId
+        }
+      })
+    )
+  })
 })

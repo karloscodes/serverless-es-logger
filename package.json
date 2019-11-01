@@ -1,6 +1,6 @@
 {
   "name": "serverless-es-logger",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "node": ">=8.0"
   },
@@ -34,6 +34,7 @@
     "aws-sdk": "^2.556.0"
   },
   "devDependencies": {
+    "@dazn/lambda-powertools-correlation-ids": "^1.8.2",
     "aws-sdk": "^2.556.0",
     "jest": "^24.9.0",
     "standard": "^14.3.1"
