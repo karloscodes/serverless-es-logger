@@ -29,6 +29,7 @@ describe('LogTransformer', () => {
     process.env.AWS_LAMBDA_FUNCTION_NAME = 'my-function'
     process.env.AWS_LAMBDA_FUNCTION_VERSION = '$LATEST'
     process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE = '1024'
+    process.env.AWS_EXECUTION_ENV = 'node10'
     process.env.STAGE = 'dev'
 
     const input = {
@@ -51,6 +52,7 @@ describe('LogTransformer', () => {
         fields: {
           hostname: input.hostname,
           awsRegion: process.env.AWS_REGION,
+          awsExecutionEnv: process.env.AWS_EXECUTION_ENV,
           functionName: process.env.AWS_LAMBDA_FUNCTION_NAME,
           functionVersion: process.env.AWS_LAMBDA_FUNCTION_VERSION,
           functionMemorySize: process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE,
@@ -63,5 +65,6 @@ describe('LogTransformer', () => {
     delete process.env.AWS_LAMBDA_FUNCTION_VERSION
     delete process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE
     delete process.env.STAGE
+    delete process.env.AWS_EXECUTION_ENV
   })
 })
