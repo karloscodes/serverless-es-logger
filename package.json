@@ -1,10 +1,10 @@
 {
   "name": "serverless-es-logger",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "engines": {
     "node": ">=8.0"
   },
-  "description": "A simple logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch. Just require and use :)",
+  "description": "A simple and self configurable logger for AWS Lambda that sends logs to Elasticsearch instead of Cloudwatch.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
