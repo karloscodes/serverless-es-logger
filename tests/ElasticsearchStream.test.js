@@ -22,7 +22,7 @@ describe('ElasticsearchStream', () => {
         v: 'v',
         name: 'logger-name',
         pid: 123,
-        hostname: 'pc'
+        extraField: 'extra'
       }
 
       const esSearchStream = new ElasticsearchStream(config)
@@ -36,7 +36,7 @@ describe('ElasticsearchStream', () => {
           message: logLine.msg,
           severity: 'info',
           fields: {
-            hostname: logLine.hostname
+            extraField: 'extra'
           }
         }
       }))
@@ -62,8 +62,7 @@ describe('ElasticsearchStream', () => {
           level: 30,
           v: 'v',
           name: 'logger-name',
-          pid: 123,
-          hostname: 'pc'
+          pid: 123
         }
 
         const esSearchStream = new ElasticsearchStream(config)

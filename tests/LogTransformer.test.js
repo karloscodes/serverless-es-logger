@@ -9,7 +9,8 @@ describe('LogTransformer', () => {
       v: 'v',
       name: 'logger-name',
       pid: 123,
-      hostname: 'pc'
+      hostname: 'pc',
+      extraField: 'extra'
     }
 
     const output = LogTransformer.transform(input)
@@ -19,7 +20,7 @@ describe('LogTransformer', () => {
       message: input.msg,
       severity: 'info',
       fields: {
-        hostname: input.hostname
+        extraField: input.extraField
       }
     }))
   })
@@ -49,14 +50,14 @@ describe('LogTransformer', () => {
         '@timestamp': input.time,
         message: input.msg,
         severity: 'info',
-        fields: {
-          hostname: input.hostname,
-          awsRegion: process.env.AWS_REGION,
-          awsExecutionEnv: process.env.AWS_EXECUTION_ENV,
-          functionName: process.env.AWS_LAMBDA_FUNCTION_NAME,
-          functionVersion: process.env.AWS_LAMBDA_FUNCTION_VERSION,
-          functionMemorySize: process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE,
-          environment: process.env.STAGE
+        autofields: {
+          AWS_REGION: process.env.AWS_REGION,
+          AWS_DEFAULT_REGION: process.env.AWS_DEFAULT_REGION,
+          AWS_EXECUTION_ENV: process.env.AWS_EXECUTION_ENV,
+          AWS_LAMBDA_FUNCTION_NAME: process.env.AWS_LAMBDA_FUNCTION_NAME,
+          AWS_LAMBDA_FUNCTION_VERSION: process.env.AWS_LAMBDA_FUNCTION_VERSION,
+          AWS_LAMBDA_FUNCTION_MEMORY_SIZE: process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE,
+          STAGE: process.env.STAGE
         }
       })
     )
