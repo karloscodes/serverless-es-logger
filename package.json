@@ -36,7 +36,7 @@
   "devDependencies": {
     "@dazn/lambda-powertools-correlation-ids": "^1.8.2",
     "aws-sdk": "^2.556.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "standard": "^14.3.1"
   },
   "keywords": [
